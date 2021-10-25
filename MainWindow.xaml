@@ -30,7 +30,7 @@
                 <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" Canvas.Left="66" Canvas.Top="79"/>
             </Canvas>
         </GroupBox>
-        <GroupBox x:Name="gbSale" Header="Current Sale" FontWeight="Bold" Grid.ColumnSpan="2" Margin="58,244,45,21">
+        <GroupBox x:Name="gbSale" Header="Current Sale" FontWeight="Bold" Grid.ColumnSpan="2" Margin="58,244,45,10">
             <Canvas RenderTransformOrigin="0.569,0.415">
                 <Label x:Name="lblQuantity" Content="Quantity" Canvas.Left="26" Canvas.Top="10" FontWeight="Normal"/>
                 <TextBox x:Name="txtQuantity" Text="0" TextWrapping="Wrap" Width="35" Canvas.Left="90" Canvas.Top="14"/>
@@ -47,9 +47,17 @@
             </Canvas>
         </GroupBox>
         <Menu Margin="0,0,125,382">
-            <MenuItem Header="File"/>
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
             <MenuItem Header="Doughnuts">
-                <MenuItem Header="Make"/>
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
+                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled"/>
+                </MenuItem>
                 <MenuItem Header="Stop"/>
             </MenuItem>
         </Menu>
