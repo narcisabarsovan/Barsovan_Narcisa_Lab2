@@ -1,0 +1,57 @@
+﻿<Window x:Name="frmMain" x:Class="Barsovan_Narcisa_Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barsovan_Narcisa_Lab2"
+        mc:Ignorable="d"
+        Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="327*"/>
+            <ColumnDefinition Width="473*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" FontSize="24" FontWeight="Bold" Margin="229,10,229,330" Grid.ColumnSpan="2"/>
+        <GroupBox x:Name="gbRaised" Header="Raised" FontWeight="Bold" Margin="88,57,10,229">
+            <Canvas>
+                <GroupBox x:Name="gbFilled" Header="Filled" Height="174" Width="230" Canvas.Left="386" Canvas.Top="-16">
+                    <Canvas>
+                        <Label x:Name="lblGlazedRaised" Content="Glazed" Canvas.Left="-384" Canvas.Top="20" Height="24" Width="53" FontWeight="Normal"/>
+                        <TextBox x:Name="txtGlazedRaised" Text="0" TextWrapping="Wrap" Width="122" IsReadOnly="True" Canvas.Left="-326" Canvas.Top="22" Height="22"/>
+                        <Label x:Name="lblLemonFilled" Content="Lemon" Canvas.Left="21" Canvas.Top="18" FontWeight="Normal"/>
+                        <TextBox x:Name="txtLemonFilled_" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" Canvas.Left="88" Canvas.Top="22"/>
+                        <Label x:Name="lblChocolateFilled" Content="Chocolate" Canvas.Left="12" Canvas.Top="58" FontWeight="Normal"/>
+                        <TextBox x:Name="txtChocolateFilled" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" Canvas.Left="88" Canvas.Top="62"/>
+                        <Label x:Name="lblVanillaFilled" Content="Vanilla" Canvas.Left="21" Canvas.Top="101" Width="57" RenderTransformOrigin="0.579,-0.294" FontWeight="Normal"/>
+                        <TextBox x:Name="txtVanillaFilled" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" Canvas.Left="88" Canvas.Top="105"/>
+                    </Canvas>
+                </GroupBox>
+                <Label x:Name="lblSugarRaised" Content="Sugar" Canvas.Left="10" Canvas.Top="76" Width="56" FontWeight="Normal"/>
+                <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" Width="120" IsReadOnly="True" Canvas.Left="66" Canvas.Top="79"/>
+            </Canvas>
+        </GroupBox>
+        <GroupBox x:Name="gbSale" Header="Current Sale" FontWeight="Bold" Grid.ColumnSpan="2" Margin="58,244,45,21">
+            <Canvas RenderTransformOrigin="0.569,0.415">
+                <Label x:Name="lblQuantity" Content="Quantity" Canvas.Left="26" Canvas.Top="10" FontWeight="Normal"/>
+                <TextBox x:Name="txtQuantity" Text="0" TextWrapping="Wrap" Width="35" Canvas.Left="90" Canvas.Top="14"/>
+                <Label x:Name="lblType" Content="Type" Canvas.Left="186" Canvas.Top="10" FontWeight="Normal"/>
+                <ComboBox x:Name="cmbType" Width="99" Canvas.Left="228" Canvas.Top="14" Height="18"/>
+                <Label x:Name="lblPrice" Content="Price" Canvas.Left="408" Canvas.Top="10" FontWeight="Normal"/>
+                <TextBox x:Name="txtPrice" Text="0" TextWrapping="Wrap" Width="48" IsReadOnly="True" Canvas.Left="488" Canvas.Top="14"/>
+                <ListBox x:Name="lstSale" Height="55" Width="536" Canvas.Left="26" Canvas.Top="37"/>
+                <Label x:Name="lblTotal" Content="Total" Canvas.Left="427" Canvas.Top="110"/>
+                <TextBox x:Name="txtTotal" Text="0" TextWrapping="Wrap" Width="92" IsReadOnly="True" Canvas.Left="470" Canvas.Top="114"/>
+                <Button x:Name="btnAddToSale" Content="Add to sale" Canvas.Left="585" Canvas.Top="17" Width="78" FontWeight="Normal"/>
+                <Button x:Name="btnRemoveItem" Content="Remove Item" Canvas.Left="585" Canvas.Top="53" FontWeight="Normal" Width="78"/>
+                <Button x:Name="btnCheckOut" Content="Check Out" Canvas.Left="585" Canvas.Top="95" Width="78"/>
+            </Canvas>
+        </GroupBox>
+        <Menu Margin="0,0,125,382">
+            <MenuItem Header="File"/>
+            <MenuItem Header="Doughnuts">
+                <MenuItem Header="Make"/>
+                <MenuItem Header="Stop"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
